@@ -44,12 +44,27 @@ print("The title is \(b.titleLabel!.text!)")
 
 
 // Optional Binding
+if let valueIfNonNil = Int("10") {
+    print("The value is \(valueIfNonNil)")
+} else {
+    print("The value is nil")
+}
+if let valueIfNonNil = Int("Dave") {
+    print("The value is \(valueIfNonNil)")
+}
 
-
-
-
-
-
+//guard let valueIfNonNil = Int("10") else {
+//    print("The value is nil. The gaurd fired")
+//}
 
 
 // Implicitly Unwrapped Optionals
+//var possibleButton: UIButton? = b
+var possibleButton: UIButton? = nil
+
+var optionalVar: UIButton? = possibleButton
+var implicitlyUnwrappedOptional: UIButton! = possibleButton
+
+print("\(optionalVar?.titleLabel?.text)")
+//print("\(optionalVar!.titleLabel!.text)")
+print("\(implicitlyUnwrappedOptional.titleLabel!.text)")
